@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeakTrail — авторские горные экспедиции и активный туризм</title>
+  <meta name="description" content="PeakTrail — организация авторских горных экспедиций и активного туризма: Камчатка, Алтай, Байкал, Эльбрус, Териберка, Дагестан.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <span class="logo__name">MERIDIAN</span><span class="logo__degree">°</span>
+        <span class="logo__desc">WILD EXPEDITIONS</span>
+      </a>
+
+      <nav class="nav" id="main-nav" aria-label="Основная навигация">
+        <button type="button" class="nav__close" aria-label="Закрыть меню">
+          <span class="nav__close-line" aria-hidden="true"></span>
+          <span class="nav__close-line" aria-hidden="true"></span>
+        </button>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#tours">Маршруты</a></li>
+          <li><a class="nav__link" href="#about">О нас</a></li>
+          <li><a class="nav__link" href="#advantages">Преимущества</a></li>
+          <li><a class="nav__link" href="#booking">Контакты</a></li>
+        </ul>
+
+        <div class="nav__footer">
+          <div class="nav__contact">
+            <a href="tel:+78005553535" class="nav__contact-phone">+7 (800) 555-35-35</a>
+            <p class="nav__contact-caption">Круглосуточная связь с базовым лагерем</p>
+            <div class="nav__contact-links">
+              <a href="https://t.me/meridian_expeditions" class="nav__contact-link">Telegram</a>
+              <a href="https://wa.me/78005553535" class="nav__contact-link">WhatsApp</a>
+            </div>
+          </div>
+
+          <a href="#booking" class="btn btn--accent nav__cta">Подобрать тур</a>
+        </div>
+      </nav>
+
+      <a href="#booking" class="btn btn--accent header__cta">Подобрать тур</a>
+
+      <button type="button" class="burger" aria-expanded="false" aria-controls="main-nav" aria-label="Открыть меню">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-overlay" data-nav-overlay></div>
+
+  <main id="main">
+
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">Горы, которые меняют <em>маршрут</em> вашей жизни</h1>
+          <p class="hero__subtitle">Авторские экспедиции и активный туризм по диким и красивым уголкам России — с опытными гидами, продуманной логистикой и вниманием к деталям.</p>
+
+          <form class="search-form" action="#tours" method="get">
+            <h2 class="visually-hidden">Быстрый поиск тура</h2>
+
+            <div class="search-form__field search-form__field--wide">
+              <label for="destination-trigger">Направление</label>
+              <div class="custom-select" data-name="destination">
+                <input type="hidden" name="destination" value="">
+                <button type="button" id="destination-trigger" class="custom-select__trigger" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="custom-select__value">Любое направление</span>
+                  <span class="custom-select__arrow" aria-hidden="true"></span>
+                </button>
+                <ul class="custom-select__options" role="listbox">
+                  <li class="custom-select__option is-selected" role="option" aria-selected="true" data-value="">Любое направление</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="kamchatka">Камчатка</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="altai">Алтай</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="baikal">Байкал</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="elbrus">Эльбрус</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="teriberka">Териберка</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="dagestan">Дагестан</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="search-form__field">
+              <label for="difficulty-trigger">Сложность</label>
+              <div class="custom-select" data-name="difficulty">
+                <input type="hidden" name="difficulty" value="">
+                <button type="button" id="difficulty-trigger" class="custom-select__trigger" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="custom-select__value">Любой уровень</span>
+                  <span class="custom-select__arrow" aria-hidden="true"></span>
+                </button>
+                <ul class="custom-select__options" role="listbox">
+                  <li class="custom-select__option is-selected" role="option" aria-selected="true" data-value="">Любой уровень</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="easy">Лёгкий</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="medium">Средний</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="hard">Сложный</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="search-form__field">
+              <label for="duration-trigger">Длительность</label>
+              <div class="custom-select" data-name="duration">
+                <input type="hidden" name="duration" value="">
+                <button type="button" id="duration-trigger" class="custom-select__trigger" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="custom-select__value">Любая</span>
+                  <span class="custom-select__arrow" aria-hidden="true"></span>
+                </button>
+                <ul class="custom-select__options" role="listbox">
+                  <li class="custom-select__option is-selected" role="option" aria-selected="true" data-value="">Любая</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="short">3–5 дней</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="medium">6–9 дней</li>
+                  <li class="custom-select__option" role="option" aria-selected="false" data-value="long">10+ дней</li>
+                </ul>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--accent search-form__submit">Найти маршрут</button>
+          </form>
+        </div>
+
+        <aside class="hero__feature">
+          <div class="hero__feature-top">
+            <span class="hero__feature-index">01 <i>// 06</i></span>
+            <span class="hero__feature-badge">Осталось 3 места</span>
+          </div>
+
+          <p class="hero__feature-label">Ближайшая экспедиция</p>
+          <h3 class="hero__feature-title">Ледовый рейд: Байкал</h3>
+          <p class="hero__feature-text">Экспедиция по чистейшему льду к скалам Ольхона и ледяным гротам.</p>
+
+          <ul class="hero__feature-metrics">
+            <li>
+              <span class="hero__feature-metric-value">10 дней</span>
+              <span class="hero__feature-metric-label">длительность</span>
+            </li>
+            <li>
+              <span class="hero__feature-metric-value">до 8 чел</span>
+              <span class="hero__feature-metric-label">группа</span>
+            </li>
+            <li>
+              <span class="hero__feature-metric-value">1.5 м</span>
+              <span class="hero__feature-metric-label">толщина льда</span>
+            </li>
+          </ul>
+
+          <a href="#booking" class="btn btn--outline hero__feature-cta">Исследовать маршрут <span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about__inner">
+          <span class="about__tag">// 02. МАНИФЕСТ И ФИЛОСОФИЯ</span>
+          <h2 class="about__title">Мы ведем туда, где <span class="accent-italic">заканчиваются дороги</span></h2>
+
+          <div class="about__text-block">
+            <p class="about__lead">MERIDIAN° — сообщество исследователей, горных гидов и спасателей. С 2015 года мы прокладываем автономные экспедиционные маршруты по самым суровым и первозданным локациям планеты.</p>
+            <p class="about__desc">Мы берем на себя сложную логистику, безопасность высшей категории и комфорт лагеря, оставляя вам главное — чистый опыт соприкосновения со стихией и тишиной дикой природы.</p>
+          </div>
+
+          <div class="about__stats">
+            <div class="about__stat-item">
+              <span class="about__stat-num">10+</span>
+              <span class="about__stat-label">лет создаем автономные экспедиции</span>
+            </div>
+            <div class="about__stat-item">
+              <span class="about__stat-num">24</span>
+              <span class="about__stat-label">уникальные авторские локации</span>
+            </div>
+            <div class="about__stat-item">
+              <span class="about__stat-num">3 200+</span>
+              <span class="about__stat-label">участников вернулись другими</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tours" class="tours">
+      <div class="container">
+        <h2 class="section-title">Популярные <em>маршруты</em></h2>
+        <p class="section-subtitle">Шесть направлений, которые точно стоит увидеть своими глазами</p>
+
+        <div class="tours__grid">
+
+          <article class="tour-card">
+            <figure class="tour-card__media">
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1000&q=85"
+                   alt="Вулкан Камчатки на фоне заснеженных хребтов, масштаб дикой природы"
+                   width="1000" height="1333" loading="lazy">
+              <span class="tour-card__index" aria-hidden="true">01<i>/06</i></span>
+              <span class="badge badge--hard">Сложный · лето</span>
+              <figcaption class="visually-hidden">Силуэт вулкана Камчатки в тумане</figcaption>
+            </figure>
+            <div class="tour-card__body">
+              <h3 class="tour-card__title">Камчатка</h3>
+              <ul class="tour-card__params">
+                <li>10 дней</li>
+                <li>Сложность: высокая</li>
+              </ul>
+              <div class="tour-card__footer">
+                <p class="tour-card__price">от 129 000 ₽</p>
+                <a href="#booking" class="tour-card__link">Исследовать маршрут <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <figure class="tour-card__media">
+              <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1000&q=85"
+                   alt="Бирюзовое высокогорное озеро Шавло в горах Алтая"
+                   width="1000" height="1333" loading="lazy">
+              <span class="tour-card__index" aria-hidden="true">02<i>/06</i></span>
+              <span class="badge badge--medium">Средний · лето</span>
+              <figcaption class="visually-hidden">Зеркальное озеро в горах Алтая</figcaption>
+            </figure>
+            <div class="tour-card__body">
+              <h3 class="tour-card__title">Алтай</h3>
+              <ul class="tour-card__params">
+                <li>8 дней</li>
+                <li>Сложность: средняя</li>
+              </ul>
+              <div class="tour-card__footer">
+                <p class="tour-card__price">от 79 000 ₽</p>
+                <a href="#booking" class="tour-card__link">Исследовать маршрут <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <figure class="tour-card__media">
+              <img src="https://images.unsplash.com/photo-1551845041-63e8e76836ea?auto=format&fit=crop&w=1000&q=85"
+                   alt="Прозрачный голубой лёд Байкала с трещинами и торосами"
+                   width="1000" height="1333" loading="lazy">
+              <span class="tour-card__index" aria-hidden="true">03<i>/06</i></span>
+              <span class="badge badge--easy">Лёгкий · зима</span>
+              <figcaption class="visually-hidden">Трещины прозрачного льда Байкала</figcaption>
+            </figure>
+            <div class="tour-card__body">
+              <h3 class="tour-card__title">Байкал</h3>
+              <ul class="tour-card__params">
+                <li>6 дней</li>
+                <li>Сложность: низкая</li>
+              </ul>
+              <div class="tour-card__footer">
+                <p class="tour-card__price">от 54 000 ₽</p>
+                <a href="#booking" class="tour-card__link">Исследовать маршрут <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <figure class="tour-card__media tour-card__media--mono">
+              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1000&q=85"
+                   alt="Высокогорные ледники Эльбруса, масштаб снежных вершин"
+                   width="1000" height="1333" loading="lazy">
+              <span class="tour-card__index" aria-hidden="true">04<i>/06</i></span>
+              <span class="badge badge--hard">Сложный · лето</span>
+              <figcaption class="visually-hidden">Ледники Эльбруса и фигура альпиниста</figcaption>
+            </figure>
+            <div class="tour-card__body">
+              <h3 class="tour-card__title">Эльбрус</h3>
+              <ul class="tour-card__params">
+                <li>9 дней</li>
+                <li>Сложность: высокая</li>
+              </ul>
+              <div class="tour-card__footer">
+                <p class="tour-card__price">от 98 000 ₽</p>
+                <a href="#booking" class="tour-card__link">Исследовать маршрут <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <figure class="tour-card__media">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85"
+                   alt="Северное скалистое побережье Териберки над Баренцевым морем"
+                   width="1000" height="1333" loading="lazy">
+              <span class="tour-card__index" aria-hidden="true">05<i>/06</i></span>
+              <span class="badge badge--medium">Средний · осень</span>
+              <figcaption class="visually-hidden">Скалистый обрыв над штормовым океаном в Териберке</figcaption>
+            </figure>
+            <div class="tour-card__body">
+              <h3 class="tour-card__title">Териберка</h3>
+              <ul class="tour-card__params">
+                <li>4 дня</li>
+                <li>Сложность: средняя</li>
+              </ul>
+              <div class="tour-card__footer">
+                <p class="tour-card__price">от 45 000 ₽</p>
+                <a href="#booking" class="tour-card__link">Исследовать маршрут <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <figure class="tour-card__media">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=85"
+                   alt="Слоистые каньоны и реки Дагестана"
+                   width="1000" height="1333" loading="lazy">
+              <span class="tour-card__index" aria-hidden="true">06<i>/06</i></span>
+              <span class="badge badge--medium">Средний · весь год</span>
+              <figcaption class="visually-hidden">Каньоны Дагестана на закате</figcaption>
+            </figure>
+            <div class="tour-card__body">
+              <h3 class="tour-card__title">Дагестан</h3>
+              <ul class="tour-card__params">
+                <li>7 дней</li>
+                <li>Сложность: средняя</li>
+              </ul>
+              <div class="tour-card__footer">
+                <p class="tour-card__price">от 63 000 ₽</p>
+                <a href="#booking" class="tour-card__link">Исследовать маршрут <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages" class="advantages">
+      <div class="container">
+        <h2 class="section-title">Почему <em>выбирают</em> PeakTrail</h2>
+        <p class="section-subtitle">Мы организуем экспедиции так, чтобы вы думали только о маршруте</p>
+
+        <div class="advantages__grid">
+          <article class="advantage-card">
+            <p class="advantage-card__index" aria-hidden="true">01</p>
+            <h3 class="advantage-card__title">Опытные гиды</h3>
+            <p class="advantage-card__text">Инструкторы с опытом восхождений от 8 лет и знанием маршрутов в любую погоду.</p>
+          </article>
+
+          <article class="advantage-card">
+            <p class="advantage-card__index" aria-hidden="true">02</p>
+            <h3 class="advantage-card__title">Полная логистика</h3>
+            <p class="advantage-card__text">Трансферы, снаряжение, проживание и питание — уже включены в стоимость тура.</p>
+          </article>
+
+          <article class="advantage-card">
+            <p class="advantage-card__index" aria-hidden="true">03</p>
+            <h3 class="advantage-card__title">Безопасность</h3>
+            <p class="advantage-card__text">Страховка, спутниковая связь и продуманные точки эвакуации на каждом маршруте.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="booking">
+      <div class="container booking__inner">
+        <div class="booking__info">
+          <h2 class="section-title">Готовы к своей <em>экспедиции</em>?</h2>
+          <p class="section-subtitle">Оставьте контакты — подберём маршрут под ваш уровень подготовки и свободные даты.</p>
+        </div>
+
+        <form class="booking-form" id="bookingForm" novalidate>
+          <div class="booking-form__field">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Иван Иванов" required minlength="2">
+            <span class="booking-form__error" id="nameError" role="alert"></span>
+          </div>
+
+          <div class="booking-form__field">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (900) 000-00-00" required pattern="^[+0-9()\s-]{10,18}$">
+            <span class="booking-form__error" id="phoneError" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn--accent booking-form__submit">Отправить заявку</button>
+          <p class="booking-form__success" id="formSuccess" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year">2026</span> PeakTrail. Все права защищены.</p>
+      <ul class="footer__links">
+        <li><a href="#">Правила бронирования</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
