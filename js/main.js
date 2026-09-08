@@ -190,7 +190,6 @@ function initCustomSelects() {
 function initMobileMenu() {
   const burger = document.querySelector(".burger");
   const nav = document.getElementById("main-nav");
-  const navClose = document.querySelector(".nav__close");
   const overlay = document.querySelector("[data-nav-overlay]");
 
   if (!burger || !nav || !overlay) {
@@ -198,6 +197,7 @@ function initMobileMenu() {
   }
 
   const navLinks = nav.querySelectorAll("a");
+  const firstNavLink = nav.querySelector(".nav__link");
   const MOBILE_BREAKPOINT = 768;
 
   function openMenu() {
@@ -207,8 +207,8 @@ function initMobileMenu() {
     burger.setAttribute("aria-expanded", "true");
     document.body.style.overflow = "hidden";
 
-    if (navClose) {
-      navClose.focus();
+    if (firstNavLink) {
+      firstNavLink.focus();
     }
   }
 
@@ -231,10 +231,6 @@ function initMobileMenu() {
       openMenu();
     }
   });
-
-  if (navClose) {
-    navClose.addEventListener("click", () => closeMenu());
-  }
 
   overlay.addEventListener("click", () => closeMenu());
 

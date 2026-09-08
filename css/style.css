@@ -331,7 +331,7 @@ p {
 
 .burger:hover,
 .burger:focus-visible {
-  background-color: rgba(243, 245, 243, 0.06);
+  opacity: 0.75;
 }
 
 .burger__line {
@@ -358,42 +358,6 @@ p {
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
-.nav__close {
-  display: none;
-  position: absolute;
-  top: var(--space-md);
-  right: var(--space-md);
-  width: 32px;
-  height: 32px;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: none;
-  border-radius: var(--radius-sm);
-  transition: opacity var(--transition-base);
-}
-
-.nav__close-line {
-  position: absolute;
-  width: 18px;
-  height: 1.5px;
-  border-radius: 1px;
-  background-color: var(--color-lime);
-}
-
-.nav__close-line:nth-child(1) {
-  transform: rotate(45deg);
-}
-
-.nav__close-line:nth-child(2) {
-  transform: rotate(-45deg);
-}
-
-.nav__close:hover,
-.nav__close:focus-visible {
-  opacity: 0.7;
-}
-
 .nav__footer {
   display: none;
   margin-top: auto;
@@ -404,16 +368,16 @@ p {
 .nav__contact {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  padding-top: var(--space-md);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 0.4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .nav__contact-phone {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
   transition: color var(--transition-base);
 }
 
@@ -430,22 +394,28 @@ p {
 
 .nav__contact-links {
   display: flex;
-  gap: var(--space-md);
-  margin-top: 0.25rem;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
 }
 
 .nav__contact-link {
-  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  font-size: 0.7rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-text-muted);
-  transition: color var(--transition-base);
+  transition: color var(--transition-base), border-color var(--transition-base);
 }
 
 .nav__contact-link:hover,
 .nav__contact-link:focus-visible {
   color: var(--color-lime);
+  border-color: rgba(184, 255, 44, 0.35);
 }
 
 .nav__cta {
@@ -1321,10 +1291,6 @@ p {
     display: flex;
   }
 
-  .nav__close {
-    display: flex;
-  }
-
   .nav {
     position: fixed;
     top: 0;
@@ -1352,7 +1318,7 @@ p {
   .nav__list {
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-lg);
+    gap: 1.75rem;
   }
 
   .nav__link {
