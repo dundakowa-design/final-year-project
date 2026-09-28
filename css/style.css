@@ -429,7 +429,7 @@ p {
     url("../images/main.jpg") center/cover no-repeat;
   background-image:
     linear-gradient(90deg, rgba(12, 18, 15, 0.92) 0%, rgba(12, 18, 15, 0.7) 45%, rgba(12, 18, 15, 0.35) 100%),
-    image-set(url("../images/main.avif") type("image/avif"), url("../images/main.jpg") type("image/jpeg"));
+    url("../images/main.jpg");
   padding-block: 0;
   color: var(--color-text);
 }
